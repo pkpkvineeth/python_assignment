@@ -1,0 +1,108 @@
+{% extends 'layout.html' %}
+{% block myBlock %}
+<form>
+        <div class="contain leftrighttop">
+                        <div class="row leftrighttop wregisterlabel">
+                                        <div class="col-sm-2">
+                                                       
+                                        </div>
+                                        <div class="col-sm-4 font-weight-light">
+                                                <label>REGISTER NOW</label>
+                                        </div>
+                                </div>
+                <div class="row form-pad">
+                        <div class="col-sm-2">
+                        Name
+                        </div>
+                        <div class="col-sm-4">
+                        <input id="name" class="form-control" type="text">   
+                        </div>
+                </div>
+                <div class="row form-pad">
+                        <div class="col-sm-2">
+                        Gender
+                        </div>
+                        <div class="col-sm-4 radiogroup" >
+                             <label for="radio1">Male</label> <input class=""  name="gender" id="radio1" value="male" type="radio" checked>  
+                             <label for="radio2">Female</label> <input class="" name="gender" id="radio2" value="female" type="radio">   
+                        </div>
+                </div>
+                <div class="row form-pad">
+                        <div class="col-sm-2">
+                        Dob        
+                         </div>
+                        <div class="col-sm-4">
+                                <input id="date" class="form-control" type="date">
+                        </div>
+                </div>
+                <div class="row form-pad">
+                        <div class="col-sm-2">
+                        Email-ID
+                        </div>
+                        <div class="col-sm-4">
+                               <input id="mail" class="form-control" type="email">                 
+                        </div>
+                </div>
+                <div class="row form-pad">
+                        <div class="col-sm-2">
+                        District
+                        </div>
+                        <div class="col-sm-4">
+                                 <select id="district" class="form-control">
+                                        <option value="1">Trivandrum</option>
+                                        <option value="2">Kollam</option>
+                                        <option value="3">Pathanamthitta</option>
+                                        <option value="4">Alappuzha</option>
+                                        <option value="5">Kottayam</option>
+                                        <option value="6">Idukki</option>
+                                        <option value="7">Ernakulam</option>
+                                        <option value="8">Thrissur</option>
+                                        <option value="9">Palakkad</option>
+                                        <option value="10">Malappuram</option>
+                                        <option value="11">Kozhikode</option>
+                                        <option value="12">Wayanad</option>
+                                        <option value="13">Kannur</option>
+                                        <option value="14">Kasargod</option>
+                                 </select>               
+                        </div>
+                </div>
+                <div class="row form-pad">
+                        <div class="col-sm-2">
+                        Username
+                        </div>
+                        <div class="col-sm-4">
+                                <input id="user" class="form-control" type="text">               
+                        </div>
+                </div>
+                <div class="row form-pad">
+                        <div class="col-sm-2">
+                        Password
+                        </div>
+                        <div class="col-sm-4">
+                                <input id="pass" class="form-control" type="password">                   
+                        </div>
+                </div>
+                <div class="row form-pad">
+                        <div class="col-sm-2">
+                        Confirm Password
+                        </div>
+                        <div class="col-sm-4">
+                                <input id="copass" class="form-control" type="password">                   
+                        </div>
+                </div>
+                <div class="row form-pad">
+                        <div class="col-sm-2">
+                               
+                               <button class="btn shadow-lg btn-danger" type="reset">
+                                        Reset
+                                </button>   
+                        </div>
+                        <div class="col-sm-4">
+                                <button class="btn shadow-lg btn-primary" type="submit" onclick="validate()">
+                                        Register
+                                </button>                   
+                        </div>
+                </div>
+        </div>
+</form>
+{% endblock %}

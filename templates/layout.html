@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm nav-pills navbar-light pos-nav">
+        <a class="navbar-brand" href="/"><img class="ict-image shadow-lg img-fluid" src="{{url_for('static', filename='images/ict.png')}}"/></a>
+        {% if(current==1) %}
+        <a class="nav-item nav-link active" href="/">Home</a>
+        {% else %}
+        <a class="nav-item nav-link" href="/">Home</a>
+        {% endif %}
+        {% if(current==2) %}
+        <a class="nav-item nav-link active" href="/services" >Services</a>
+        {% else %}
+        <a class="nav-item nav-link" href="/services" >Services</a>
+        {% endif %}
+        {% if(current==3) %}
+        <a class="nav-item nav-link active" href="/about" >About</a>
+        {% else %}
+        <a class="nav-item nav-link " href="/about" >About</a>
+        {% endif %}
+    </nav>
+    {% block myBlock %}
+    {%  endblock %}
+    <footer class="footer">
+        <span class="footer-text">Sample website.Images and names are used for study purpose only,are copyrighted to their respective owners.</span>
+    </footer>
+</body>
+</html>
